@@ -1,0 +1,11 @@
+objects = add.o div.o sub.o
+main.exe:$(objects)
+	gcc sources/main.c $(objects) -o main.exe
+add.o:sources/add.c
+	gcc -c sources/add.c -o add.o
+div.o:sources/div.c
+	gcc -c sources/div.c -o div.o
+sub.o:sources/sub.c
+	gcc -c sources/sub.c -o sub.o
+clean:
+	rm -rf *.o
